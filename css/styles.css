@@ -645,6 +645,7 @@ address span {
     left: 0;
     right: 0;
     z-index: 10;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
     width: 528px;
@@ -821,4 +822,44 @@ textarea {
 .form-input:not(:focus),
 .comment:not(:focus) {
     color: var(--secondary-text-color);
+}
+.policy-field {
+    color: var(--secondary-text-color);
+    line-height: 1.7;
+    vertical-align: middle;
+}
+
+.policy-field a {
+    color: var(--accent-text-color);
+    border-bottom: 1px solid var(--accent-bg-color);
+}
+.policy-field label {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+.policy-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.checkbox:checked + .policy-icon {
+    background-color: var(--accent-bg-color);
+    background-image: url(../images/icon\ check.svg);
+    background-origin: border-box;
+    border: 2px solid var(--accent-bg-color);
+}
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
